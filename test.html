@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="test">
+        <li>第一个</li>
+        <li>第二个</li>
+        <li>第三个</li>
+    </ul>
+    <script>
+        window.onload=function(){
+            var lis=document.getElementById("test").children;
+            for(var i=0;i<lis.length;i++){
+                (function(i){
+                    lis[i].onclick=function(){
+                        alert(i);
+                    }
+                })(i);
+            }
+        }
+    </script>
+</body>
+</html
